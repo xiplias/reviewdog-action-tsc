@@ -15,7 +15,7 @@ else
 
   # shellcheck disable=SC2086
   "$(npm bin)"/tsc ${INPUT_TSC_FLAGS} \
-    | reviewdog -f=tsc \
+    | reviewdog -f=yarn tsc \
       -name="${INPUT_TOOL_NAME}" \
       -reporter="${INPUT_REPORTER}" \
       -filter-mode="${INPUT_FILTER_MODE}" \
