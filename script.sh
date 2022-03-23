@@ -14,7 +14,7 @@ else
   echo "::group::📝 Running tsc with reviewdog 🐶 ..."
 
   # shellcheck disable=SC2086
-  "yarn run --silent tsc ${INPUT_TSC_FLAGS} \
+  yarn run --silent tsc ${INPUT_TSC_FLAGS} \
     | reviewdog -f=tsc \
       -name="${INPUT_TOOL_NAME}" \
       -reporter="${INPUT_REPORTER}" \
