@@ -4,18 +4,12 @@ cd "${GITHUB_WORKSPACE}/${INPUT_WORKDIR}" || exit 1
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-if [ ! -f "$(npm bin)"/tsc ]; then
-  echo "::group::🔄 Running npm install to install tsc ..."
-  npm install
-  echo "::endgroup::"
-fi
-
-if [ ! -f "$(npm bin)"/tsc ]; then
+if [ ! -f yarn run tsc ]; then
   echo "❌ Unable to locate or install tsc. Did you provide a workdir which contains a valid package.json?"
   exit 1
 else
 
-  echo ℹ️ tsc version: "$("$(npm bin)"/tsc --version)"
+  echo ℹ️ tsc version: "yarn run tsc --version)"
 
   echo "::group::📝 Running tsc with reviewdog 🐶 ..."
 
