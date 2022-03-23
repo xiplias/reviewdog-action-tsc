@@ -4,8 +4,6 @@ cd "${GITHUB_WORKSPACE}/${INPUT_WORKDIR}" || exit 1
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-echo ℹ️ tsc version: `yarn run tsc --version)`
-
 echo "::group::📝 Running tsc with reviewdog 🐶 ..."
 
 # shellcheck disable=SC2086
